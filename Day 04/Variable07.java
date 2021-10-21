@@ -13,7 +13,7 @@ public class Variable07 {
 		int numBoxPacked = numApple / numPerBox;
 		int numAppleLeft = numApple % numPerBox;
 		
-		System.out.printf("Number of Box Packed: %d\nNumber of Apples left: %d\n", numBoxPacked, numAppleLeft);
+		System.out.printf("\nNumber of Box Packed: %d\nNumber of Apples left: %d\n", numBoxPacked, numAppleLeft);
 		stdIn.close();
 	}
 }
