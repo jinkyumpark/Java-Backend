@@ -1,7 +1,7 @@
 # Week 1 - Java Fundamentals
 - Programming Environment Settings(Installing Java, IDE, Setting Envrionemnt Variable etc.)
 - Comment
-- printf
+- printf(%d, %f, %s, %c, etc.)
 - Escape Sequence(\n, \t, \", \', %%, \\, \b)
 - Operator(+, -, *, /, %)
 - Run Java File in Command Line Interface
@@ -14,4 +14,10 @@
 - if, else if, else
 - Priority of Operators(()-> ++, -- -> *, /, % -> +, - -> Relational -> Logical)
 
-# Week 2
+# Week 2 - Java Fundamentals
+- switch, case, break
+- Ternary Operator( ? :)
+- for-loop
+- continue
+
+# Week 3
