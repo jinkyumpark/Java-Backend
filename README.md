@@ -19,5 +19,9 @@
 - Ternary Operator( ? :)
 - for-loop
 - continue
+- while
+- Random
+
+- Problem : Multiplication Table, Factorial, Data to Week of Day, print Calander, Factor of Number, print triangle, prime number)
 
 # Week 3
