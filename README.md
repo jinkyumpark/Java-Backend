@@ -23,7 +23,6 @@
 - Random
 - do-while
 - array
-
 - Problem
   - Multiplication Table
   - Factorial
@@ -34,8 +33,6 @@
   - Prime Number
   - Lottery Number Generator
   - Rock-Scissor-Paper
-
-
 - Algorithm : Sorting Algorithms
 
 # Week 3
