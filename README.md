@@ -24,7 +24,7 @@
 - do-while
 - array
 
-- Problem : Multiplication Table, Factorial, Data to Week of Day, Print Calander, Factor of Number, Print Triangle, Prime Number, Lottery Number Generator, Rock-Scissor-Paper
+  - Problem : Multiplication Table, Factorial, Data to Week of Day, Print Calander, Factor of Number, Print Triangle, Prime Number, Lottery Number Generator, Rock-Scissor-Paper
 - Algorithm : Sorting Algorithms
 
 # Week 3
