@@ -23,6 +23,9 @@
 - Random
 - do-while
 - array
+  - Multidimensional Array
+  - Array Clone
+- Reference Variable
 - Problem
   - Multiplication Table
   - Factorial
