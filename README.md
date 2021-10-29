@@ -25,7 +25,11 @@
 - array
   - Multidimensional Array
   - Array Clone
-- Reference Variable
+  - Reference Variable
+- Method
+  - Call by Value
+  - Local Variable
+  - parameter
 - Problem
   - Multiplication Table
   - Factorial
