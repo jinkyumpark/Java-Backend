@@ -28,8 +28,9 @@
   - Reference Variable
 - Method
   - Call by Value
+  - Call by Reference
   - Local Variable
-  - parameter
+  - Parameter
 - Problem
   - Multiplication Table
   - Factorial
