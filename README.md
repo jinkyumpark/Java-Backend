@@ -31,7 +31,7 @@
   - Call by Reference
   - Local Variable
   - Parameter
-- Problem
+- Problems
   - Multiplication Table
   - Factorial
   - Data to Week of Day
@@ -47,7 +47,17 @@
 - Class
   - Overloading
   - Random Number of Parameter(...)
+  - Modifier(public, private, protected, default)
+  - Getter/Setter(How to automatically generate getter/setter in eclipse)
+  - Constructor
+  - this
+  - Deep Copy
+- Characteristic of OOP
+  - Encapculation
 - Java Default API
+- Problems
+  - Multiplication Table Class
+  - Addition Class
 # Week 4
 # Week 5
 # Week 6
