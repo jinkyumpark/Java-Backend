@@ -44,6 +44,10 @@
 - Algorithm : Sorting Algorithms
 
 # Week 3
+- Class
+  - Overloading
+  - Random Number of Parameter(...)
+- Java Default API
 # Week 4
 # Week 5
 # Week 6
