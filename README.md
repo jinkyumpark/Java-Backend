@@ -52,6 +52,8 @@
   - Constructor
   - this
   - Deep Copy
+  - static
+  - Singleton Design Pattern
 - Characteristic of OOP
   - Encapculation
 - Java Default API
