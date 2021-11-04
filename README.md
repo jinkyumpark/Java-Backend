@@ -43,7 +43,7 @@
   - Rock-Scissor-Paper
 - Algorithm : Sorting Algorithms
 
-# Week 3
+# Week 3 - Java OOP
 - Class
   - Overloading
   - Random Number of Parameter(...)
