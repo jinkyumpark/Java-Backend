@@ -54,9 +54,11 @@
   - Deep Copy
   - static
   - Singleton Design Pattern
+  - toString Method
 - Characteristic of OOP
   - Encapculation
 - Java Default API
+- Constant(final)
 - Problems
   - Multiplication Table Class
   - Addition Class
