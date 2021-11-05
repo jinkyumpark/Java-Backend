@@ -55,6 +55,11 @@
   - static
   - Singleton Design Pattern
   - toString Method
+- Inheritance
+  - extends
+  - super
+  - instanceof
+- Type Casting
 - Characteristic of OOP
   - Encapculation
 - Java Default API
