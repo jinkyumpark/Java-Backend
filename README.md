@@ -46,6 +46,7 @@
 # Week 3 - Java OOP
 - Class
   - Overloading
+  - Overriding
   - Random Number of Parameter(...)
   - Modifier(public, private, protected, default)
   - Getter/Setter(How to automatically generate getter/setter in eclipse)
@@ -68,7 +69,11 @@
   - Multiplication Table Class
   - Addition Class
   - Card
-# Week 4
+# Week 4 - Java OOP
+- Object Class
+  - toString
+  - equals
+  - getClass
 # Week 5
 # Week 6
 # Week 7
