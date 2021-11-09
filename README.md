@@ -69,13 +69,46 @@
   - Multiplication Table Class
   - Addition Class
   - Card
-# Week 4 - Java OOP
+# Week 4 - Various Classes
 - Object Class
   - toString
   - equals
   - getClass
 - Vector
-
+- String Class
+  - .compareTo()
+  - .concat()
+  - .equalsIgnoreCase()
+  - .indexOf()
+  - .replace()
+  - .split()
+  - .substring()
+- Calendar Class (java.util.Calendar)
+  - .getInstance()
+  - .set()
+  - .add()
+  - .roll()
+  - DAY_OF_WEEK
+  - DAY_OF_WEEK_IN_MONTH
+  - DATE
+  - AM_PM
+  - HOUR
+  - HOUR_OF_DAY
+  - MINUTE
+  - SECOND
+  - MILLISECOND
+- Wrapper Class
+  - ==
+  - .equals()
+  - .compareTo()
+  - .toString()
+- BigInteger Class
+  - BigInteger.ONE
+- Date (java.util.Date)
+- Formatter (java.text.SimpleDateFormat, java.text.DecimalFormat)
+  - y, m, d, H, h, m, s, S, a, D, d, w, W, f, E
+  - .parse()
+  - 
 
 # Week 5
 # Week 6
