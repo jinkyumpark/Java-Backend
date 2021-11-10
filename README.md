@@ -69,7 +69,7 @@
   - Multiplication Table Class
   - Addition Class
   - Card
-# Week 4 - Various Classes
+# Week 4 - Advanced OOP, Various Classes
 - Object Class
   - toString
   - equals
@@ -108,7 +108,10 @@
 - Formatter (java.text.SimpleDateFormat, java.text.DecimalFormat)
   - y, m, d, H, h, m, s, S, a, D, d, w, W, f, E
   - .parse()
-  - 
+- Abstract Class
+  - abstract
+  - @ (Annotation)
+- Interface
 
 # Week 5
 # Week 6
