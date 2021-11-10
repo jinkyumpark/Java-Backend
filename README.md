@@ -108,6 +108,18 @@
 - Formatter (java.text.SimpleDateFormat, java.text.DecimalFormat)
   - y, m, d, H, h, m, s, S, a, D, d, w, W, f, E
   - .parse()
+- Collection Class
+  - Generics
+  - Vector
+  - ArrayList
+  - LinkedList
+  - HashSet
+- Data Structure
+  - Array
+  - List
+  - Set
+  - Map
+ 
 - Abstract Class
   - abstract
   - @ (Annotation)
