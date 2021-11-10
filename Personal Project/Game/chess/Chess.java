@@ -8,5 +8,4 @@ public class Chess {
 		Board board = new Board();
 		board.printBoard();
 	}
-	
 }
