@@ -12,3 +12,6 @@
 - Implemented isValidMove for Pawn, Bishop, King, Queen
 - Initailized board
 - When printing board, black appears capitalized and white appears lower-cased
+
+## Nov.18
+- Implemented GUI using swing, awt
