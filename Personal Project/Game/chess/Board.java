@@ -1,7 +1,15 @@
 package chess;
-//king, rook, bishop, queen, knight, pawn
 
-public class Board {
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.GridLayout;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+
+class Board extends JFrame implements ActionListener {
 	private Piece[][] board = new Piece[8][8];
 	
 	Board() {
@@ -41,15 +49,25 @@ public class Board {
 		// King
 		board[7][4] = new King(0, 3, false);
 
-	}
-	
-	public void printBoard() {
-		for(int i = 0; i < board.length; i++) {
-			for(int j = 0; j < board[i].length; j++) {
-				System.out.printf("|%s\t", board[i][j] != null ? board[i][j].getTeam() ? board[i][j].getName():board[i][j].getName().toLowerCase() : "");
+		
+		Container con = getContentPane();
+		
+		con.setLayout(new GridLayout(8, 8));
+		
+		int index = 0;
+		for(int i = 0; i < 8; i++) {
+			for(int j = 0; j < 8; j++) {
+				JButton btn = new JButton(board[i][j] == null ? "" : board[i][j].getName());
+				if(index % 2 == 0) 
+					btn.setBackground(Color.BLACK);
+				btn.setOpaque(true);
+				con.add(btn);
 			}
-			System.out.println("|");
 		}
+		
+		setTitle("Chess");
+		setSize(800, 800);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
 	}
-
 }

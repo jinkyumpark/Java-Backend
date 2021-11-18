@@ -13,7 +13,7 @@ abstract class Piece {
 		this.y = y;
 		this.team = team;
 	}
-	
+		
 	public boolean getTeam() {
 		return team;
 	}
@@ -137,7 +137,7 @@ class Queen extends Piece {
 		
 		// Queen can move either in stright line or diagonally without limit
 		Bishop b = new Bishop(getX(), getY(), true);
-		Rock r = new Rock(getX(), getY(), true);
+		Rook r = new Rook(getX(), getY(), true);
 		if(b.isValidMove(x, y) || r.isValidMove(x, y))
 			return true;
 		return false;
