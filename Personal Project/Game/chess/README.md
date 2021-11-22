@@ -15,3 +15,6 @@
 
 ## Nov.18
 - Implemented GUI using swing, awt
+
+## Nov.22
+- Implemented basic logic for GUI(with bugs)
