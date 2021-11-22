@@ -4,7 +4,7 @@ package chess;
 // 8 * 8
 public class Chess {
 	public static void main(String[] args) {
-		Board board = new Board();
+		Board Chessboard = new Board();
+		
 	}
 }
-

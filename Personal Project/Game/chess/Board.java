@@ -4,13 +4,21 @@ import java.awt.Color;
 import java.awt.Container;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
 
+// TODO set piece to ImageIcon
 
 class Board extends JFrame implements ActionListener {
-	private Piece[][] board = new Piece[8][8];
+	static Piece[][] board = new Piece[8][8];
+	
+	boolean isSelected = false;
+	int[] selectedPieceCoordinate = new int[2];
 	
 	Board() {
 		// Initialize black(true) Pieces
@@ -48,7 +56,6 @@ class Board extends JFrame implements ActionListener {
 		board[7][3] = new Queen(0, 4, false);
 		// King
 		board[7][4] = new King(0, 3, false);
-
 		
 		Container con = getContentPane();
 		
@@ -57,11 +64,16 @@ class Board extends JFrame implements ActionListener {
 		int index = 0;
 		for(int i = 0; i < 8; i++) {
 			for(int j = 0; j < 8; j++) {
-				JButton btn = new JButton(board[i][j] == null ? "" : board[i][j].getName());
-				if(index % 2 == 0) 
-					btn.setBackground(Color.BLACK);
+				ImageIcon icon = new ImageIcon("images/king_black.png");
+
+				JButton btn = new JButton((board[i][j] == null ? "" : 
+					board[i][j].getTeam() ? board[i][j].getName() : board[i][j].getName().toLowerCase()) + i + j, icon);
+//				JButton btn = new JButton(icon);
+//				if(index % 2 == 0) 
+//					btn.setBackground(Color.BLACK);
 				btn.setOpaque(true);
 				con.add(btn);
+				btn.addActionListener(this);
 			}
 		}
 		
@@ -70,4 +82,32 @@ class Board extends JFrame implements ActionListener {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
 	}
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		System.out.println(e.getActionCommand());
+		
+		if(isSelected) {
+			move(Board.board[selectedPieceCoordinate[0]][selectedPieceCoordinate[1]], 
+					e.getActionCommand().charAt(0), e.getActionCommand().charAt(1));
+		}
+		
+		if(Character.isAlphabetic(e.getActionCommand().charAt(0))) {
+			isSelected = true;
+			selectedPieceCoordinate[0] = e.getActionCommand().charAt(1);
+			selectedPieceCoordinate[1] = e.getActionCommand().charAt(2);			
+		} else {
+			isSelected = false;
+		}
+		
+	}
+	
+	public static void move(Piece piece, int x, int y) {
+		// name, team, x, y
+		
+		Board.board[x][y] = Board.board[piece.getX()][piece.getY()];
+		Board.board[piece.getX()][piece.getY()] = null;
+	}
+	
+	
 }
