@@ -137,9 +137,9 @@
   - Comment <!-- --!>
   - Header <h1>
   - Paragraph <p>
-  - <br>, <hr>
-  - <img>
-  - <a>
+  - \<br>, \<hr>
+  - \<img\>
+  - \<a\>
 # Week 7
 # Week 8
 # Week 9
