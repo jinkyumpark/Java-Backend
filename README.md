@@ -132,7 +132,14 @@
   - Calculator
   - Calendar
 
-# Week 6
+# Week 6 - Web Programming Fundamentals
+- HTML
+  - Comment <!-- --!>
+  - Header <h1>
+  - Paragraph <p>
+  - <br>, <hr>
+  - <img>
+  - <a>
 # Week 7
 # Week 8
 # Week 9
