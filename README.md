@@ -142,7 +142,8 @@
   - \<a>
   - Character Tag(\<b>, \<i>, \<sup>, \<sub>, \<ins>, \<u>, \<del>, \<small>)
   - \<marquee>
-  - List(\<ul>, \<ol>, \<li>)
+  - List(\<ul>, \<ol>, \<li>, \<dl>, \<dt>, \<dd>)
+  - Table(\<table>, \<tr>, \<td>)
 # Week 7
 # Week 8
 # Week 9
