@@ -18,3 +18,6 @@
 
 ## Nov.22
 - Implemented basic logic for GUI(with bugs)
+
+## Nov.23
+- Implemented chess board GUI!
