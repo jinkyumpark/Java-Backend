@@ -10,11 +10,11 @@
 ### Implement Java Collection Class by Myself
 
 ### Implement Popular Data Structure
-#### Dynamic Arrays
-#### Linked Lists
-#### Stacks
-#### Queues
-#### Trees
-#### Graphs
-#### Tables
-#### Sets
+- Dynamic Arrays
+- Linked Lists
+- Stacks
+- Queues
+- Trees
+- Graphs
+- Tables
+- Sets
