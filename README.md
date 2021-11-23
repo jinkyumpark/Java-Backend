@@ -149,6 +149,12 @@
   - \<label>
   - \<fieldset>, \<legend>
   - \<div>
+  - \<span>
+- Color
+  - Keyword
+  - RGB
+  - Hex Code
+  - HSL
 # Week 7
 # Week 8
 # Week 9
