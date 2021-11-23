@@ -23,4 +23,4 @@
 - Implemented chess board GUI!
 
 
-![alt text](https://github.com/jinkyumpark/Java-Backend/tree/main/Personal%Project/Game/chess/images/Chess%Board%GUI.png?raw=true)
+![alt text](https://github.com/jinkyumpark/Java-Backend/tree/main/Personal_Project/Game/chess/images/Chess_Board_GUI.png?raw=true)
