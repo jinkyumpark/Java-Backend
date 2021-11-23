@@ -144,6 +144,11 @@
   - \<marquee>
   - List(\<ul>, \<ol>, \<li>, \<dl>, \<dt>, \<dd>)
   - Table(\<table>, \<tr>, \<td>)
+  - Input(type=text, checkbox, radio, button, submit, reset, password) <form>
+  - \<select>, \<option>
+  - \<label>
+  - \<fieldset>, \<legend>
+  - \<div>
 # Week 7
 # Week 8
 # Week 9
