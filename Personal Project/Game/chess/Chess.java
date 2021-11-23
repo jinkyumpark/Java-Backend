@@ -5,6 +5,5 @@ package chess;
 public class Chess {
 	public static void main(String[] args) {
 		Board Chessboard = new Board();
-		
 	}
 }

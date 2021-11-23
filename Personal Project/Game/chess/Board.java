@@ -20,6 +20,10 @@ class Board extends JFrame implements ActionListener {
 	boolean isSelected = false;
 	int[] selectedPieceCoordinate = new int[2];
 	
+	public static void main(String[] args) {
+		new Board();
+	}
+	
 	Board() {
 		// Initialize black(true) Pieces
 		// Pawn
@@ -62,15 +66,26 @@ class Board extends JFrame implements ActionListener {
 		con.setLayout(new GridLayout(8, 8));
 		
 		int index = 0;
+		int row = 0;
 		for(int i = 0; i < 8; i++) {
 			for(int j = 0; j < 8; j++) {
 				ImageIcon icon = new ImageIcon("images/king_black.png");
 
 				JButton btn = new JButton((board[i][j] == null ? "" : 
-					board[i][j].getTeam() ? board[i][j].getName() : board[i][j].getName().toLowerCase()) + i + j, icon);
-//				JButton btn = new JButton(icon);
-//				if(index % 2 == 0) 
-//					btn.setBackground(Color.BLACK);
+					board[i][j].getTeam() ? board[i][j].getName() : board[i][j].getName().toLowerCase()) 
+						+ i + j, icon);
+
+				if(index % 2 == 0)
+					btn.setBackground(Color.BLACK);
+				index++;
+				if((row % 2 == 0 && index % 8 == 0) || (row % 2 != 0 && index % 9 == 0) ) {
+					row++;
+					if(row % 2 == 0)
+						index = 0;
+					else
+						index = 1;
+				}
+				
 				btn.setOpaque(true);
 				con.add(btn);
 				btn.addActionListener(this);
@@ -98,8 +113,9 @@ class Board extends JFrame implements ActionListener {
 			selectedPieceCoordinate[1] = e.getActionCommand().charAt(2);			
 		} else {
 			isSelected = false;
+			selectedPieceCoordinate[0] = -1;
+			selectedPieceCoordinate[1] = -1;
 		}
-		
 	}
 	
 	public static void move(Piece piece, int x, int y) {
@@ -108,6 +124,4 @@ class Board extends JFrame implements ActionListener {
 		Board.board[x][y] = Board.board[piece.getX()][piece.getY()];
 		Board.board[piece.getX()][piece.getY()] = null;
 	}
-	
-	
 }
