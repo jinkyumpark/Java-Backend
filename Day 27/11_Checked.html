@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>11_Checked</title>
+<style type="text/css">
+	#text {
+		width: 650px;
+		height: 300px;
+		background: silver;
+		overflow:hidden;
+		transition-duration: 1s;
+	}
+	input[type=checkbox]:checked~#text {height: 0px;}
+	
+	.button{
+	width: 300px; 
+	height: 20px; 
+	background: yellow;
+	border: 1px solid black;
+	}
+	input[type=button]:clicked~#text {height: 0px;}
+</style>
+</head>
+<body>
+	<input type="checkbox">if you check this, below text disappears
+	<div id="button1" class="button">If you click this, below text disappears</div>
+	<div id="text">
+		<p> 법률이 정하는 주요방위산업체에 종사하는 근로자의 단체행동권은 
+		법률이 정하는 바에 의하여 이를 제한하거나 인정하지 아니할 수 있다.
+		 모든 국민은 신속한 재판을 받을 권리를 가진다. 형사피고인은 상당한
+		  이유가 없는 한 지체없이 공개재판을 받을 권리를 가진다.</p>
+	</div>
+</body>
+</html>
