@@ -159,6 +159,14 @@
   - Hex Code
   - HSL
 - CSS
+  - Selector(class(.), id(#), descandant(>), adjacent(+), sibling(~))
+  - width
+  - height
+  - border(border-width, border-style, border-color, border-radius)
+  - background
+  - margin(top, bottom, middle)
+  - float-left
+  - :hover(transition-duration)
 
 # Week 7
 # Week 8
