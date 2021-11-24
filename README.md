@@ -150,11 +150,16 @@
   - \<fieldset>, \<legend>
   - \<div>
   - \<span>
+  - \<center>
+  - Special Character(&amp, &lt, &gt, &nbsp, &quot, &laquo, &raquo, &cent, &pound, &yen, &#92)
+  - \<header>, \<nav>, \<aside>, \<section>, \<article>, \<footer>
 - Color
   - Keyword
   - RGB
   - Hex Code
   - HSL
+- CSS
+
 # Week 7
 # Week 8
 # Week 9
