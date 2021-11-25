@@ -132,7 +132,7 @@
   - Calculator
   - Calendar
 
-# Week 6 - Web Programming Fundamentals
+# Week 6 - HTML, CSS
 - HTML
   - Comment <!-- --!>
   - Header \<h1>
@@ -159,14 +159,25 @@
   - Hex Code
   - HSL
 - CSS
-  - Selector(class(.), id(#), descandant(>), adjacent(+), sibling(~))
+  - Selector(class(.), id(#), descandant(>), adjacent(+), sibling(~), first-child, last-child, nth-child(n))
   - width
   - height
   - border(border-width, border-style, border-color, border-radius)
-  - background
+  - background(background-image, background-size, background-repeat, background-attachment, background-position)
   - margin(top, bottom, middle)
   - float-left
   - :hover(transition-duration)
+  - Box Model(padding, border, margin)
+  - list-style
+  - Size(%, em, px)
+  - position(static, relative, absolute, fixed)
+  - z-index
+  - overflow(hidden, scroll, auto)
+  - font(font-size, font-family, font-style, font-weight, line-height, text-align)
+  - span
+ 
+
+
 
 # Week 7
 # Week 8
