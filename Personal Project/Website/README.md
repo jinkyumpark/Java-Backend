@@ -1,4 +1,4 @@
 # Website Plan
-I'll create various website (both for portfolio purpose and personal/commercial use) and organize into one URL.
+I'll create various website (both for portfolio purposes and personal/commercial usage) and organize into one URL.
 
 ## Stock Portfolio (/investment)
