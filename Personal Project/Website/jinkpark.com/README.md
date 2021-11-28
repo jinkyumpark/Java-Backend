@@ -1,4 +1,6 @@
-# Overview
+# What is jinkpark.com?
+
+# Financial
 ## Purpose
 I have been investing for almost 2 years now, and I often like to do simulation on my future portfolio.
 However, I have discovered that there are no perfect software to do just that, and that is why I decided to create one.
@@ -17,3 +19,6 @@ However, I have discovered that there are no perfect software to do just that, a
 
 ![IMG_1788](https://user-images.githubusercontent.com/61900235/143763545-aed9b88f-ca7d-43dd-9efa-293ab9a4534b.png)
 
+# TODO
+## Financial
+[ ] Display submenu when financial in topnav is hovered
