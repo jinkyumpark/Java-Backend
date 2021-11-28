@@ -11,3 +11,8 @@ However, I have discovered that there are no perfect software to do just that, a
 ## Nov.26
 - Formulated an idea for this website
 - Designed overall structure of the website
+
+## Nov.28
+- Made initial implementation
+![IMG_1788](https://user-images.githubusercontent.com/61900235/143763545-aed9b88f-ca7d-43dd-9efa-293ab9a4534b.png)
+
