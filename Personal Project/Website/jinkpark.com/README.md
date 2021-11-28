@@ -21,4 +21,4 @@ However, I have discovered that there are no perfect software to do just that, a
 
 # TODO
 ## Financial
-[ ] Display submenu when financial in topnav is hovered
+- [ ] Display submenu when financial in topnav is hovered
