@@ -1,0 +1,74 @@
+#topnav {
+    position: relative;
+    left: 20%;
+    background-color: green;
+    width: 60%;
+    height: 50px;
+    top: 0px;
+    bottom: 0px;
+}
+#topnav img {
+    float: left;
+}
+#topnav li {
+    list-style: none;
+    float: left;
+    padding: 10px;
+}
+#topnav li:last-child {
+    float: none;
+}
+#topnavRight{
+    position: absolute;
+    right: 0%;
+    top: 10%;
+}
+#topnavRight img {
+    padding-left: 10px;
+}
+
+#subnav {
+    position: relative;
+    left: 20%;
+    background-color: orange;
+    width: 60%;
+    height: 50px;
+    overflow: hidden;
+}
+
+#subnav li {
+    list-style: none;
+    float:left;
+    padding: 10px;
+}
+#subnav li:last-child {
+    float:none;
+}
+#subnavRight {
+    float: right;
+}
+
+#leftArrow {
+    background: purple;
+    width: 50px;
+    height: 500px;
+    float: left;
+}
+
+#content {
+    float: right;
+}
+
+#rightArrow {
+    background: purple;
+    width: 50px;
+    height: 500px;
+    float: right;
+}
+
+.newsBlock {
+    background-color: red;;
+    width: 270px;
+    height: 250px;
+    float: left;
+}

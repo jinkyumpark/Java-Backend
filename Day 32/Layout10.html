@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout10</title>
+    <style>
+        body {
+            background-color: rgb(111, 110, 112);
+        }
+        #topnav, #menu {
+            background-color: rgb(44, 43, 44);
+        }
+        #menu {
+            width: 150px;
+            height: 800px;
+            float: left;
+            position: fixed;
+            top: 0px;
+            right: calc(50% + 410px);
+        }
+        #menu li {
+            list-style: none;
+            color: white;
+        }
+        #menu img {
+            width: 100px;
+            float: left;
+        }
+        #menu h1 {
+            color: white;
+        }
+        #content {
+            background-color: rgb(44, 43, 44);
+            width: 800px;
+            position: relative;
+            margin: 0 auto;
+        }
+        #topnav {
+            position: relative;
+        }
+        #topnav ul li{
+            float: left;
+            font-size: 80%;
+            padding: 10px;
+            list-style: none;
+            color: white;
+        }
+        #contentImage {
+            padding-left: 10%;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <img src="images/naver_logo.png">
+        <h1>영화</h1>
+        <ul>
+            <li><h2>영화홈</h2></li>
+           <li><h2>상영작 </h2></li> 
+           <li><h2>영화랭킹 </h2></li> 
+            <li><h2>예매</h2></li>
+            <li><h2>평점 리뷰</h2></li>
+        </ul>
+    </div>
+    <div id="content">
+        <div id="topnav">
+            <ul>
+                <li><h2>예매순</h2></li>
+                <li><h2>현재상영작</h2></li>
+                <li><h2>개봉예정작</h2></li>
+                <li><h2>평점순</h2></li>
+                <li><h2>박스오피스</h2></li>
+                <li><h2>다운로드순</h2></li>
+            </ul>
+        </div>
+
+        <div id="contentImage">
+            <div>
+            <img class="movieImage" src="images/naverMovie/1.png">
+            <img class="movieImage" src="images/naverMovie/2.png">
+            <img class="movieImage" src="images/naverMovie/3.png">
+            <img class="movieImage" src="images/naverMovie/4.png">
+            <img class="movieImage" src="images/naverMovie/5.png">
+            </div>
+            <div>
+            <img class="movieImage" src="images/naverMovie/6.png">
+            <img class="movieImage" src="images/naverMovie/7.png">
+            <img class="movieImage" src="images/naverMovie/8.png">
+            <img class="movieImage" src="images/naverMovie/9.png">
+            <img class="movieImage" src="images/naverMovie/10.png">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
