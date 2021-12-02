@@ -176,8 +176,12 @@
   - font(font-size, font-family, font-style, font-weight, line-height, text-align)
   - span
 
-# Week 7 UI Implementation(HTML, CSS)
+# Week 7 UI Implementation(HTML, CSS), Javascript
 - CSS Animation
+- Javascript
+  - alert(), document.write()
+  - Escape Sequence
+  - Variable(var)
 
 
 # Week 8
