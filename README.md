@@ -179,9 +179,17 @@
 # Week 7 UI Implementation(HTML, CSS), Javascript
 - CSS Animation
 - Javascript
+  - Comment(//, /* */)
   - alert(), document.write()
-  - Escape Sequence
+  - Escape Sequence(\", \', \n, \\)
   - Variable(var)
+  - Arithematic Operator(+, -, *, /, %)
+  - Comparison Operator(<, >, <=, >=, ==, !=)
+  - Logical Operator(&&, ||, !)
+  - Variable(var)
+  - Assignment Operator(+=, -=, *=, /=, %=, ++, --)
+  - typeof
+  - prompt(), confirm()
 
 
 # Week 8
