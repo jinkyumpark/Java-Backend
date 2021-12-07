@@ -192,7 +192,9 @@
   - prompt(), confirm()
 
 
-# Week 8
+# Week 8 Javascript
+- Javascript Image Control
+
 # Week 9
 # Week 10
 # Week 11
