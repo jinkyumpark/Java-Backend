@@ -192,8 +192,21 @@
   - prompt(), confirm()
 
 
-# Week 8 Javascript
+# Week 8 Javascript, jQuery
 - Javascript Image Control
+- jQuery
+  - $()
+  - .parent()
+  - .parents()
+  - .closest()
+  - .children()
+  - .prev()
+  - .prevAll()
+  - .prevUntil()
+  - .next()
+  - .nextAll()
+  - .nextUntil()
+  - .sibilings()
 
 # Week 9
 # Week 10
