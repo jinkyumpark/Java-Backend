@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_jQuery_Basic02.html</title>
+    <script src="script/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#wrap h1").css({
+                "background-color":"yellow",
+                "border":"2px dashed #00f"
+            })
+            $("#wrap > h1").css("border", "2px dashed #0f0")
+        })
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>Adjacent Selector</h1>
+        <p>Paragraph</p>
+        <section>
+            <h1>Child Selector</h1>
+            <p>Paragraph</p>
+        </section>
+        <h1>Adjacent Selector</h1>
+    </div>
+</body>
+</html>

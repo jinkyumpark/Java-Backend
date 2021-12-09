@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>-01_jQuery.html</title>
+    <script src="script/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+        })
+
+        $(function() {
+            $("body").css("background-color", "$00FFFF")
+        })
+
+        $(function() {
+            $("*").css("border", "1px solid blue")
+        })
+
+        $(function() {
+            $("h3").css("background-color", "#f0f").css("border", "2px dahsed #ff0")
+        })
+
+        $(function() {
+            $("#tit").css("background-color", "#ff0").css("border", "2px solid #f00").css("font-size", "250%")
+        })
+
+        $(function() {
+            $(".tit").css("background-color", "#ff0").css("border", "2px dashed #f00").css("font-size", "250%")
+        })
+
+        $(function() {
+            $("h1#tit").css("color", "red")
+        })
+
+    </script>
+</head>
+<body onload="abc()">
+    <h1 id="tit">Title</h1>
+    <h1>jQuery</h1>
+    <h2>Selector</h2>
+    <h3>Direct Selector</h3>
+    <h1 class="tit2">Title</h1>
+</body>
+</html>

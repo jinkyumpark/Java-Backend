@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_DOM_Operation.html</title>
+    <style type="text/css">
+        .item1 {
+            background-color: red;
+            color: white;
+        }
+        .item2 {
+            background-color: lightgreen;
+            color: white
+        }
+        .item3 {
+            background-color: lightskyblue;
+            color:white;
+        }
+
+        button {
+            width: 300;
+            height: 400;
+        }
+    </style>
+    <script src="script/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('h1').addClass('item1')
+        })
+        
+        $(function( ) {
+            $('h1').addClass(function(index) {
+                return 'item' + (index + 1)
+            })
+        })
+
+        $(function() {
+            var src = $('img').attr('src')
+            var header1 = document.createElement('h1')
+            var textNode = document.createTextNode(src)
+            header1.appendChild(textNode)
+            document.body.appendChild(header1)
+
+            var w = $('img').attr('width')
+            header1 = document.createElement('h1')
+            textNode = document.createTextNode(w)
+            header.appendChild(textNode)
+            document.body.appendChild(header1)
+        })
+
+        function scaleImg() {
+            $('img').attr('width', '300')
+            $('img').attr('width', function(index) {
+                return (index + 1) * 100
+            })
+        }
+    </script>
+</head>
+<body>
+    <h1>Koala.jpg</h1>
+    <img src="images/Koala.jpg" width="150">
+    <h1>Penguins.jpg</h1>
+    <img src="images/Penguins.jpg" width="150">
+    <h1>Tulips.jpg</h1>
+    <img src="images/Tulips.jpg" width="150".>
+
+    <button onClick="scaleImg()">Scale Image</button>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_jQuery_Basic03</title>
+    <script src="script/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('input[type=text').val('Hello jQuery').css("background", "yellow")
+        })
+
+        // $(function() {
+        //     setInterval(function() {
+        //         var value = $('select>option:selected').val()
+        //         alert(value)
+        //     }, 5000)
+        // })
+        $(function() {
+            $('tr:odd').css("background", "yellow")
+            $('li:first').css({"background":"#ff0"})
+            $('li:last').css({"background":"#0ff"})
+        })
+
+        var a1 = [1, 2, 3, 4, 5, 6, 7, 8]
+        var array = [
+            {name: 'Naver', link: 'https://www.naver.com'},
+            {name: 'Daum', link:'https://www.daum.net'},
+            {name: 'Nate', link: 'https://www.nate.com'}
+        ]
+
+        $(function() {
+            $.each(array, function(index, item) {
+                var output = ''
+                output += '<a href="' + item.link + '"><h1>' + item.name + '</h1</a>'
+                document.body.innerHTML += output;
+            })
+
+            var m_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+            $.each(m_days, function(index, item) {
+                var output = '';
+                output = (index + 1) + " Month: " + item + ' Day' + '<br>'
+                document.body.innerHTML += output;
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <!-- <input type="text"><br>
+    <input type="password"><br>
+    <input type="radio"><br>
+    <input type="checkbox"><br>
+    <input type="file"><br>
+    <input type="image"src="images/Koala.jpg" width="100"><br> -->
+    <table border="1">
+        <tr><th>Name</th><th>Blood Type</th><th>Area</th></tr>
+        <tr><td>JinPark</td><td>O</td><td>Songpa, Seoul</td></tr>
+        <tr><td>JinPark</td><td>O</td><td>Songpa, Seoul</td></tr>
+        <tr><td>JinPark</td><td>O</td><td>Songpa, Seoul</td></tr>
+        <tr><td>JinPark</td><td>O</td><td>Songpa, Seoul</td></tr>
+        <tr><td>JinPark</td><td>O</td><td>Songpa, Seoul</td></tr>
+        <tr><td>JinPark</td><td>O</td><td>Songpa, Seoul</td></tr>
+        <tr><td>JinPark</td><td>O</td><td>Songpa, Seoul</td></tr>
+    </table>
+</body>
+</html>

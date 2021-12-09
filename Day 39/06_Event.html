@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_Event.html</title>
+    <script src="script/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        // $(function() {
+        //     $('h1').on('click', function(event)) {
+        //         var k = $(this).index()
+        //         $(this).html(function(index, html) {
+        //             return html + k
+        //         })
+        //     })
+
+            // $(function() {
+            //     $('h1').hover(
+            //         function(event) {$(this).addClass('reverse')}
+            //         function(event) {$(this).removeClass('reverse')}
+            //     )
+            // })
+
+            // $(function() {
+            //     $('h1').on('click', function() {
+            //         $(this).html('CLICK')
+            //         $(this).off()
+            //     })
+            // })
+
+
+        // })
+        $(function() {
+            $('textarea').keyup(function(event) {
+            var inputlength = $(this).val().length
+            var remain = 150 - inputlength
+            $('h1').html(remain)
+            if(remain >= 0) {
+                $('h1').css('color', 'black')
+            } else {
+                $('h1').css('color', 'red')
+            }
+        })
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <p>My Thought...</p><h1>150</h1>
+        <textarea cols="70" rows="5"></textarea>
+    </div>
+</body>
+</html>
