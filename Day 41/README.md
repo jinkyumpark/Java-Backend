@@ -26,6 +26,23 @@ Database
 - https://www.oracle.com/database/technologies/xe-prior-release-downloads.html
 - Mac에서는 Docker 설치하고 설치
 
+- Relational DB
+
+- (--) 주석문
+- 열 : field, 속성, attribute
+- 행 : record, tuple
+
+- DB Ex : Oracle, MySQL, MSSQL, MariaDB, MongoDB, Access
+- DBMS - 데이터베이스 조작 운영을 가능하게 하는 프로그램
+- Oracle DBMS : SQL Developer, SQL Plus, Eclipse
+
+- DB 활용분야
+    - 일반 웹사이트 게시판 게시물 저장
+    - 포털 검색 사이트 검색 대산 정보 저장
+    - 게임의 게임정보, 케릭터 정보
+    - 회원들의 회원정보
+
+
 ## CMD Command
 ### sqlplus
 데이터 베이스 접근, 아이디 비번 쳐야 함
@@ -51,3 +68,4 @@ scott이라는 이름, tiger라는 pw로 유저 생성
 - property(server -> localhost, db -> xe)
 
 - enter user id/pw
+

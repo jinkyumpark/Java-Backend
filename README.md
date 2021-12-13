@@ -222,6 +222,11 @@
   - create user scott identified by tiger;
   - grant dba to scott;
   - conn
+- Relational DB
+  - Row, field, attribute
+  - Column, record, tuple
+  - Ex : Oracle, MySQL, MariaDB, MongoDB, Acess
+  - Oracle DBMS : SQL Developer, SQL Plus, Eclipse
 
 # Week 10
 # Week 11
