@@ -216,7 +216,12 @@
   - setInterval()
   - clearInterval()
 
-# Week 9
+# Week 9 Oracle DB
+- cmd Command
+  - sqlplus
+  - create user scott identified by tiger;
+  - grant dba to scott;
+  - conn
 
 # Week 10
 # Week 11

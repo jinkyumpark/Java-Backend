@@ -25,3 +25,15 @@ Database
 - Oracle(주로), MySQL 공부할 것임
 - https://www.oracle.com/database/technologies/xe-prior-release-downloads.html
 - Mac에서는 Docker 설치하고 설치
+
+## CMD Command
+### sqlplus
+데이터 베이스 접근, 아이디 비번 쳐야 함
+### create user scott identified by tiger;
+scott이라는 이름, tiger라는 pw로 유저 생성
+
+### grant dba to scott;
+권한 부여
+
+### conn
+유저에 연결
