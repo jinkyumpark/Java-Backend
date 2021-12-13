@@ -50,6 +50,22 @@ Database
     - DML(Database Management Language)
     - DCL(Database Control Language)
 
+- DDL(Data Definition Language) - 데이터 정의어
+    - Create, Alter, Drop
+    - Create : 테이블, 뷰 등을 생성할때 사용하는 명령
+    - Alter : 이미 생성되어 있는 테이블 또는 뷰 등의 구조 수정
+    - Drop : 이미 생성되어 있는 테이블 또는 뷰 등을 삭제하기 위한 명령
+
+- DML(Data Management Language) - 데이터 조작
+    - Insert : 테이블에 레코드 추가
+    - Update : 테이블에 있는 레코드 일부/전부 수정
+    - Delete : 테이블에 있는 레코드 일부/전부 삭제
+    - Select : 테이블에 있는 레코드 일부/전부 조회(검색)/열람
+
+- DCL(Data Control Language) = 데이터 제어어
+    - Grant : 특정 사용자에게 권한을 설정
+    - Revoke : 특정 사용자에게 권한을 해제
+
 ## CMD Command
 ### sqlplus
 데이터 베이스 접근, 아이디 비번 쳐야 함

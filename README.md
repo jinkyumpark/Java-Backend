@@ -228,9 +228,9 @@
   - Ex : Oracle, MySQL, MariaDB, MongoDB, Acess
   - Oracle DBMS : SQL Developer, SQL Plus, Eclipse
 - SQL(Structured Query Language)
-  - DDL(Database Defintion Language)
-  - DML(Database Management Language)
-  - DCL(Database Control Language)
+  - DDL(Database Defintion Language) : Create, Alter, Drop
+  - DML(Database Management Language) : Insert, Update, Delete, Select
+  - DCL(Database Control Language) : Grant, Revoke
 
 # Week 10
 # Week 11
