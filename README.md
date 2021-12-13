@@ -1,7 +1,6 @@
 # Overall Progress
 - Java
-- Front-end Basic(HTML, CSS, JS)
-- jQuery
+- Front-end(HTML, CSS, JS, jQuery)
 - Database(Oracle, MySQL)
 
 # Week 1 - Java Fundamentals
@@ -231,6 +230,10 @@
   - DDL(Database Defintion Language) : Create, Alter, Drop
   - DML(Database Management Language) : Insert, Update, Delete, Select
   - DCL(Database Control Language) : Grant, Revoke
+- Primary Key
+  - integrity
+- Foreign Key
+  - referential integrity
 
 # Week 10
 # Week 11
