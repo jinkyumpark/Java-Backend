@@ -227,6 +227,10 @@
   - Column, record, tuple
   - Ex : Oracle, MySQL, MariaDB, MongoDB, Acess
   - Oracle DBMS : SQL Developer, SQL Plus, Eclipse
+- SQL(Structured Query Language)
+  - DDL(Database Defintion Language)
+  - DML(Database Management Language)
+  - DCL(Database Control Language)
 
 # Week 10
 # Week 11

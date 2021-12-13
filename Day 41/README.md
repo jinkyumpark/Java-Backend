@@ -42,6 +42,13 @@ Database
     - 게임의 게임정보, 케릭터 정보
     - 회원들의 회원정보
 
+- SQL(DB에서 쓰는 언어)
+    - SQL(Structured Query Language) : RDBMS의 데이터를 관리하기 위해 설계된 특수 목적 프로그램
+
+- SQL 3가지 종류
+    - DDL(Database Definition Language)
+    - DML(Database Management Language)
+    - DCL(Database Control Language)
 
 ## CMD Command
 ### sqlplus
