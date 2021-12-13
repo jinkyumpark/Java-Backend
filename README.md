@@ -1,3 +1,9 @@
+# Overall Progress
+- Java
+- Front-end Basic(HTML, CSS, JS)
+- jQuery
+- Database(Oracle, MySQL)
+
 # Week 1 - Java Fundamentals
 - Programming Environment Settings(Installing Java, IDE, Setting Envrionemnt Variable etc.)
 - Comment
