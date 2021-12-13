@@ -5,18 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>24_Plugin.html</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="jquery.innerfade.js"></script>
+    <script src="/Java-Backend/script/jquery-3.6.0.js"></script>
+    <script src="/Java-Backend/script/jquery.innerfade.js"></script>
     <script type="text/javascript">
         $(function() {
             $('#inner-fade').innerfade({
-            animationtype='fade', 
-            speed: 'slow', 
-            timeout: 2000,
-            containerheight: '1em'
+                animationtype:'fade', 
+                speed: 'slow', 
+                timeout: 2000,
+                containerheight: '1em'
             })
         })
     </script>
+    <style>
+        li {
+            list-style: none;
+        }
+
+        img {
+            width: 80%;
+        }
+    </style>
 </head>
 <body>
     <ul id="inner-fade">
