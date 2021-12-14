@@ -21,3 +21,12 @@ alter table booklist add grade varchar2(15);
 alter table memberlist add gender varchar2(3);
 alter table memberlist add age number(2);
 
+alter table rentlist drop constraint fk1;
+alter table rentlist drop constraint fk2;
+alter table rentlist drop constraint rent_pk;
+
+alter table booklist modify num number(5);
+alter table memberlist modify num number(5);
+alter table rentlist modify booknum number(5);
+alter table rentlist modify membernum number(5);
+
