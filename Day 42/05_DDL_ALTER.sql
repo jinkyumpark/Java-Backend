@@ -57,3 +57,17 @@ create table ORDERS1(
     constraint pk_order primary key(order_id),
     constraint ck_order_mode check(order_mode in('direct', 'online'))
 );
+
+-- 테이블 수정 EX
+-- customer_id 필드명을 customer_number로 수정
+alter table order1 rename column customer_id to customer_number
+
+alter table orders1 add constraint pro_check
+check(promotion_id between 10000 and 99999);
+
+-- table copy
+create table orders2 as select * from orders1;
+
+-- remove table
+drop table orders2 purge
+-- you can delete it without purse, but it can be reversable
