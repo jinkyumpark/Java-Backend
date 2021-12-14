@@ -251,6 +251,8 @@
   - number()
   - varchar2()
 
+- Oracle View
+
 # Week 10
 # Week 11
 # Week 12
