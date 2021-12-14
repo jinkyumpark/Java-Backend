@@ -46,3 +46,7 @@
     - float - number 하위 타입
     - binary_float - 32비트 부동 소수점
     - binary_double - 64비트 부동 소수점
+
+    ## 테이블 수정(ALTER
+    - 필드명의 변경
+        - ALTER TABLE table_name RENAME COLUMN table_name_before TO table_name_before
