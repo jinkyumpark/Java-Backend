@@ -30,3 +30,30 @@ alter table memberlist modify num number(5);
 alter table rentlist modify booknum number(5);
 alter table rentlist modify membernum number(5);
 
+alter table memberlist add constraint check_gender check(gender in ('F', 'M'));
+
+alter table memberlist add constraint check_age check(age <= 120);
+
+alter table rentlist add constraint fk1
+foregin key(booknum) references booklist(num);
+
+alter table rentlist add constraint fk2
+foreign  key(membernum) references memberlist(num);
+
+alter table rentlist add constraint rent_pk
+primary key(num);
+
+-- 테이블 생성 연습문제
+
+create table ORDERS1(
+    ORDER_ID number(12, 0),
+    ORDER_DATE date,
+    ORDER_MODE varchar2(8),
+    CUSTOMER_ID number(6, 0),
+    ORDER_STATUS number(2, 0),
+    ORDER_TOTAL number(8, 2) default 0,
+    SALES_REP_ID number(6, 0),
+    PROMOTION_ID number(6, 0),
+    constraint pk_order primary key(order_id),
+    constraint ck_order_mode check(order_mode in('direct', 'online'))
+);
