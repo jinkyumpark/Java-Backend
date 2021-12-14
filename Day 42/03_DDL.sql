@@ -24,3 +24,5 @@ create table rentlist(
     constraint fk1 foreign key(bookNum) references booklist(nookNum),
     constraint fk2 foreign key(memberNum) references memberlist(memberNum)
 );
+
+select * from rentlist;
