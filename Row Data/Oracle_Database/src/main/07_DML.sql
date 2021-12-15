@@ -35,5 +35,18 @@ insert into booklist(num, subject, makeyear, inprice, rentprice, grade) values(b
 insert into booklist(num, subject, makeyear, inprice, rentprice, grade) values(book_seq.nextVal, 'NFT 사용설명서', 2021, 16200, 0, 'all');
 
 delete from memberlist;
+
 select * from memberlist;
 
+insert into memberlist(num, name, phone, birth, bpoint, joindate, gender, age)
+	values(member_seq.nextVal, 'Jin', '010-4539-8503', '99/10/25', null, '99/10/25', 'M', 22);
+insert into memberlist(num, name, phone, birth, bpoint, joindate, gender, age)
+	values(member_seq.nextVal, 'Yerim', '010-2407-8503', '99/05/02', null, '99/05/02', 'F', 22);
+insert into memberlist(num, name, phone, birth, bpoint, joindate, gender, age)
+	values(member_seq.nextVal, 'Rona', '010-6767-8503', '16/10/25', null, '16/10/25', 'F', 5);
+
+select * from rentlist;
+	
+insert into rentlist values('2021/12/01', rent_seq.nextVal, 15, 15, 100);
+
+insert into rentlist values('2021/12/01', rent_seq.nextVal, 3, 1, 100);
