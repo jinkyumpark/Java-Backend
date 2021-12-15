@@ -11,3 +11,19 @@
 - UPDATE 테이블명 SET 변경내용 WHERE 검색조건
 - WHERE은 생략 가능, 하지만 이렇게 하면 전체 레코드가 대상
 - 검색조건 : 필드명 (비교-관계 연산자) 조건값, 흔히 자바에서 if 안에 사용했던 연산
+
+# alter
+- on delete cascade - 삭제되면 연계되서 삭제
+
+# select
+- select * from tab; - 단순검색
+- select * from tabs; - 상세검색
+
+- select - from - where
+- || 이어붙이기 연산
+- as로 하면 그 이름으로 대신 불림
+
+- select empno || '-' || ename as emp_info from emp
+
+# desc
+- desc 
