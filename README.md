@@ -215,7 +215,7 @@
   - setInterval()
   - clearInterval()
 
-# Week 9 Oracle DB
+# Week 9 Oracle DB, SQL
 - cmd Command
   - sqlplus
   - create user scott identified by tiger;
@@ -234,6 +234,24 @@
   - integrity
 - Foreign Key
   - referential integrity
+
+- SQL
+  - create table -()
+  - select * from -
+  - alter table 
+  - rename column - to 
+  - subject to
+  - drop table - purge
+  - check
+  - constraint
+  - default
+  - primary key
+  - in
+
+  - number()
+  - varchar2()
+
+- Oracle View
 
 # Week 10
 # Week 11
