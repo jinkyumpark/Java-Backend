@@ -22,3 +22,36 @@ select name, phone from memberlist where gender is null;
 update memberlist set gender = 'M' where gender = null;
 -- booklist에서 도서 제목에 두 번째 글자가 것인 도서 정보
 select * from booklist where name like '_것%';
+
+select * from emp where deptno = 10 or deptno = 20 or deptno = 30;
+
+select * from emp where deptno = any(10, 20, 30);
+
+select * from emp where deptno = some(10, 20, 30);
+select * from emp where deptno in(10, 20, 30);
+
+select * from emp where deptno = ALL(10, 20 , 40);
+
+select * from emp where deptno <> ALL(10, 20, 40);
+select * from emp where deptno <> 10 and deptno <> 20 and deptno <> 40;
+
+select * from emp where deptno not in(10, 20, 40);
+
+select * from emp where sal >= 1000 order by ename;
+
+-- sal이 1000 이상인 데이터를 ename의 오름차순 정렬
+select * from emp where sal > 1000 order by ename;
+-- sal이 1000 이상인 데이터를 ename의 내림차순으로 정렬
+select * from emp where sal > 1000 order by ename desc;
+-- job으로 내림차순 정렬
+select * from emp order by job desc;
+-- job으로 내림차순 정렬 후 같은 job_id 사이에서는 순서를 hireedate의 내림차순으로 정렬
+select * from emp order by job desc, hiredate desc;
+
+select * from emp where not (emptno = 10);
+select * from emp where deptno <> 10;
+
+select * from emp where sal >= 100 and sal <= 3000;
+select * from emp where sal between 1000 and 3000;
+
+
