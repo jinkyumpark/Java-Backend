@@ -51,7 +51,14 @@ select * from emp order by job desc, hiredate desc;
 select * from emp where not (emptno = 10);
 select * from emp where deptno <> 10;
 
+-- 급여 1000 이상, 3000 이하
 select * from emp where sal >= 100 and sal <= 3000;
 select * from emp where sal between 1000 and 3000;
 
+-- 특정 필드값이 널이거나 아닌 레코드
+select * from emp where comm is null;
+select * from emp where comm is not null;
 
+select deptno, enmae, sal*12 as 연봉 from emp;
+
+select deptno, ename, comm, nvl(sal, 1000) * 12 as 연봉 from emp;alter
