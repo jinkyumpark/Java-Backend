@@ -52,3 +52,4 @@ having avg(discounbt) < 180;
 
 -- group by 절에는 select와 from 사이에 쓰여진 함수를 제외한 모든 필드를 반드시 써 줘야 함
 
+
