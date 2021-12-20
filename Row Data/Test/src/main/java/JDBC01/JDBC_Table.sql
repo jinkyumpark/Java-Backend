@@ -15,3 +15,7 @@ insert into customer values(5, '¹ÚÂ°¸®', 'jinpark1029@gmail.co', '010-4534-8503'
 select * from customer;
 
 create sequence num_seq start with 7 increment by 1;
+
+select * from booklist;
+
+select data_type from INFORMATION_SCHEMA.COLUMNS where table_name = 'booklist';
