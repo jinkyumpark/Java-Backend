@@ -5,8 +5,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Scanner;
 
-public class Book_Select {
+public class Book_Delete {
 	public static void main(String[] args) {
 		String driver = "oracle.jdbc.driver.OracleDriver";
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
@@ -21,7 +22,7 @@ public class Book_Select {
 			
 			String sql = "select * from booklist";
 			pstmt = con.prepareStatement(sql);
-			rs = pstmt.executeQuery();
+			rs = pstmt.executeQuery(sql);
 			
 			System.out.println("도서번호\t출판연도\t입고가격\t출고가격\t등급\t제목");
 			System.out.println("---------------------------------------------------------------");
@@ -33,17 +34,21 @@ public class Book_Select {
 						);
 			}
 			
+			Scanner sc = new Scanner(System.in);
+			System.out.print("삭제할 도서의 도서번호 입력: ");
+			String booknum = sc.nextLine();
+			
+			sql = "delete from booklist where num=?";
+			pstmt = con.prepareStatement(sql);
+
+			pstmt.setInt(1, Integer.parseInt(booknum));
+			int result = pstmt.executeUpdate();
+			
+			if(result == 1) System.out.print("Delete Successful");
+			else System.out.print("Delete Unsuccessful");
 			
 		} catch(ClassNotFoundException e) {
 			e.printStackTrace();
-		} catch(SQLException e) {
-			e.printStackTrace();
-		}
-		
-		try {
-			if(con != null) con.close();
-			if(pstmt != null) pstmt.close();
-			if(rs != null) rs.close();
 		} catch(SQLException e) {
 			e.printStackTrace();
 		}
