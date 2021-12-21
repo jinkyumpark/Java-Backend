@@ -1,5 +1,15 @@
 # Day 1
+- Programming Environment Setting(Eclipse, Environment Variables, )
+- Basic Java
+    - comment
+    - printf
+- Naming Convention
+
 # Day 2
+- Basic Java
+    - Escape Sequence
+    - printf %
+    - Operation()
 # Day 3
 # Day 4
 # Day 5
@@ -46,3 +56,5 @@
 
 # Day 46
 - JDBC DAO/DTO/DRIVER Program
+    - DAO(SELECT, INSERT, UPDATE, DELETE)
+    

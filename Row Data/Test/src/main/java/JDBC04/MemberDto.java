@@ -10,6 +10,19 @@ public class MemberDto {
 	private int bpoint;
 	private Date joinDate;
 	
+	public MemberDto(int membernum, String name, String phone, Date birth, int bpoint, Date joinDate, String gender, int age) {
+		this.membernum = membernum;
+		this.name = name;
+		this.phone = phone;
+		this.birth = birth;
+		this.bpoint = bpoint;
+		this.joinDate = joinDate;
+		this.gender = gender;
+		this.age = age;
+	}
+	
+	public MemberDto() {}
+	
 	public int getMembernum() {
 		return membernum;
 	}
