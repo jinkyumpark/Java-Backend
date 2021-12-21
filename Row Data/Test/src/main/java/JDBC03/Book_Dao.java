@@ -25,7 +25,7 @@ public class Book_Dao {
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
-				Book_Dto bdto = new Book_Dto(rs.getString("subject"), rs.getInt("makeyear"), 
+				Book_Dto bdto = new Book_Dto(rs.getInt("num"), rs.getString("subject"), rs.getInt("makeyear"), 
 						rs.getInt("inprice"), rs.getInt("rentprice"), rs.getString("grade"));
 				list.add(bdto);
 			}
@@ -78,12 +78,56 @@ public class Book_Dao {
 		return result;
 	}
 	
-	public void update() {
+	public int update(Book_Dto bdto) {
+		int result = 0;
+		String sql = "update booklist set subject=?, makeyear=?, inprice=?, rentprice=?, grade=? where num=?";
 		
+		try {
+			Class.forName(driver);
+			con = DriverManager.getConnection(url, "scott", "tiger");
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1,  bdto.getSubject());
+			pstmt.setInt(2, bdto.getMakeyear());
+			pstmt.setInt(3,  bdto.getInprice());
+			pstmt.setInt(4, bdto.getRentprice());
+			pstmt.setString(5, bdto.getGrade());
+			pstmt.setInt(result, bdto.getNum());
+			result = pstmt.executeUpdate();
+		} catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return result;
 	}
 	
-	public void delete() {
+	public int delete(int num) {
+		String sql = "delete from booklist where num=?";
+		int result = 0;
 		
+		try {
+			Class.forName(driver);
+			con = DriverManager.getConnection(url, "scott", "tiger");
+			
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1,  num);
+			
+			result = pstmt.executeUpdate();
+		} catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch(SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(con != null) con.close();
+				if(pstmt != null) pstmt.close();
+				if(rs != null) rs.close();
+			} catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return result;
 	}
 
 	public Book_Dto getBook(int num) {
@@ -93,6 +137,15 @@ public class Book_Dao {
 		try {
 			Class.forName(driver);
 			con = DriverManager.getConnection(url, "scott", "tiger");
+			
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, num);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				bdto = new Book_Dto(rs.getInt(num), rs.getString("subject"), rs.getInt("makeyear"),
+						rs.getInt("inprice"), rs.getInt("rentprice"), rs.getString("grade"));
+			}
 		} catch(ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch(SQLException e) {

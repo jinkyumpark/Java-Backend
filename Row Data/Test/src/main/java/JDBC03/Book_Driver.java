@@ -30,7 +30,7 @@ public class Book_Driver {
 				update(sc, bdao);
 				break;
 			case "4":
-				bdao.delete();
+				delete(sc, bdao);
 				break;
 			default:
 				System.out.println("메뉴 선택이 잘못되었습니다.");
@@ -85,10 +85,55 @@ public class Book_Driver {
 		// 도서번호로 조회해서 Book_Dto에 저장
 		Book_Dto bdto = bdao.getBook(num);
 		
+		if(bdto == null) {
+			System.out.println("입력한 도서번호로 조회된 도서 없음");
+			return;
+		}
 		// 수정할 사항 입력, 수정하지 않을 항목은 엔터만 입력받아 패스
-		
 		// 수정할 사항은 저장해둔 Book_Dto에 업데이트
+
+		System.out.print("수정할 도서의 제목 입력: ");
+		String subject = sc.nextLine();
+		if(!subject.equals("")) bdto.setSubject(subject);
+		
+		System.out.print("수정할 도서의 출판년도 입력: ");
+		String makeyear = sc.nextLine();
+		if(!makeyear.equals("")) bdto.setMakeyear(Integer.parseInt(makeyear));
+		
+		System.out.print("수정할 도서의 입고가격 입력: ");
+		String inprice = sc.nextLine();
+		if(!inprice.equals("")) bdto.setInprice(Integer.parseInt(inprice));
+		
+		System.out.print("수정할 도서의 출고가격 입력: ");
+		String rentprice = sc.nextLine();
+		if(!rentprice.equals("")) bdto.setRentprice(Integer.parseInt(rentprice));
+		
+		System.out.print("수정할 도서의 등급을 입력: ");
+		String grade = sc.nextLine();
+		if(!grade.equals("")) bdto.setGrade(grade);
 		
 		// Dao에 Book_Dto를 보내서 해달 레코드 수정
+		int result = bdao.update(bdto);
+		if(result == 1) System.out.println("레코드 수정 성공");
+		else System.out.println("레코드 수정 실패");
+	}
+
+	private static void delete(Scanner sc, Book_Dao bdao) {
+		int num = 0;
+		while(true) {
+			System.out.print("삭제할 도서의 도서번호 입력: ");
+			String input = sc.nextLine();
+			if(input.equals("")) {
+				System.out.print("도서번호 입력은 필수입니다.");
+			} else {
+				num = Integer.parseInt(input);
+				break;
+			}
+			
+		}
+		int result = bdao.delete(num);
+		if(result == 1) System.out.println("레코드 삭제 성공");
+		else System.out.println("레코드 삭제 실패");
+
 	}
 }

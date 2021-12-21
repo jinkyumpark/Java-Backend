@@ -16,6 +16,15 @@ public class Book_Dto {
 		this.grade = grade;
 	}
 	
+	public Book_Dto(int num, String subject, int makeyear, int inprice, int rentprice, String grade) {
+		this.num = num;
+		this.subject = subject;
+		this.makeyear = makeyear;
+		this.inprice = inprice;
+		this.rentprice = rentprice;
+		this.grade = grade;
+
+	}
 	
 	public int getNum() {
 		return num;
