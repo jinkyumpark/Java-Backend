@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class Book_Dao {
 	String driver = "oracle.jdbc.driver.OracleDriver";
@@ -13,12 +14,40 @@ public class Book_Dao {
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
 	
-	public void select() {
+	public ArrayList<Book_Dto> select() {
+		ArrayList<Book_Dto> list = new ArrayList<Book_Dto>();
+		String sql = "select * from booklist order by num desc";
 		
+		try {
+			Class.forName(driver);
+			con = DriverManager.getConnection(url, "scott", "tiger");
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				Book_Dto bdto = new Book_Dto(rs.getString("subject"), rs.getInt("makeyear"), 
+						rs.getInt("inprice"), rs.getInt("rentprice"), rs.getString("grade"));
+				list.add(bdto);
+			}
+		} catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch(SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(con != null) con.close();
+				if(pstmt != null) pstmt.close();
+				if(rs != null) rs.close();
+			} catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return list;
 	}
 	
-	public void insert(Book_Dto bdto) {
+	public int insert(Book_Dto bdto) {
 		String sql = "insert into booklist values(book_seq.nextVal, ?, ?, ?, ?, ?)";
+		int result = 0;
 		try {
 			Class.forName(driver);
 			con = DriverManager.getConnection(url, "scott", "tiger");
@@ -46,7 +75,7 @@ public class Book_Dao {
 				e.printStackTrace();
 			}
 		}
-		
+		return result;
 	}
 	
 	public void update() {
@@ -55,5 +84,29 @@ public class Book_Dao {
 	
 	public void delete() {
 		
+	}
+
+	public Book_Dto getBook(int num) {
+		Book_Dto bdto = null;
+		String sql = "select * from booklist where num=?";
+		
+		try {
+			Class.forName(driver);
+			con = DriverManager.getConnection(url, "scott", "tiger");
+		} catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch(SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(con != null) con.close();
+				if(pstmt != null) pstmt.close();
+				if(rs != null) rs.close();
+			} catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return bdto;
 	}
 }
