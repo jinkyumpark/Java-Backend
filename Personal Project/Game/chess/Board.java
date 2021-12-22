@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
@@ -69,11 +70,12 @@ class Board extends JFrame implements ActionListener {
 		int row = 0;
 		for(int i = 0; i < 8; i++) {
 			for(int j = 0; j < 8; j++) {
-				ImageIcon icon = new ImageIcon("images/king_black.png");
 
-				JButton btn = new JButton((board[i][j] == null ? "" : 
-					board[i][j].getTeam() ? board[i][j].getName() : board[i][j].getName().toLowerCase()) 
-						+ i + j, icon);
+//				JButton btn = new JButton((board[i][j] == null ? "" : 
+//					board[i][j].getTeam() ? board[i][j].getName() : board[i][j].getName().toLowerCase()) 
+//						+ i + j, icon);
+				ImageIcon icon = new ImageIcon("king_black.png");
+				JButton btn = new JButton("King", icon);
 
 				if(index % 2 == 0)
 					btn.setBackground(Color.BLACK);
@@ -91,7 +93,7 @@ class Board extends JFrame implements ActionListener {
 				btn.addActionListener(this);
 			}
 		}
-		
+						
 		setTitle("Chess");
 		setSize(800, 800);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

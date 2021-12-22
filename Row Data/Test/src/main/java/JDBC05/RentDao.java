@@ -87,8 +87,7 @@ public class RentDao {
 		if(result == 1) return true;
 		else return false;
 	}
-	
-	
+
 	
 	public RentDto getRent(int num) {
 		RentDto rdto = null;
@@ -111,6 +110,15 @@ public class RentDao {
 	public int delete(int num) {
 		int result = 0;
 		con = DBManager.getConnection();
+		String sql = "delete from rentlist where num=?";
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, num);
+			result = pstmt.executeUpdate();
+		} catch(SQLException e) {
+			e.printStackTrace();
+		}
 		
 		DBManager.close(con, pstmt, rs);
 		return result;

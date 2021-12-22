@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Layout09</title>
+    <style type="text/css">
+        body {
+            background-color:#f5f6f8;
+            position: absolute;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%)        
+        }
+
+        header img {
+            width: 200px;
+            padding: 20px;
+            position: relative;
+            left: 20%;
+        }
+
+        .input input {
+            width: 400px;
+            height: 40px;
+        }
+        .input h3 {
+            font-size: 80%;
+        }
+        #bday input {
+            width: 128px;
+            height: 40px;
+        }
+
+        #id h6 {
+            position: absolute;
+            top: 10%;
+            right: 20px;
+            color: #a8a8a8;
+        }
+
+        #seperator {
+            height: 20px;
+        }
+
+        #phoneNumber #seperator {
+            height: 10px;
+        }
+
+        #bday select {
+            width: 128px;
+            height: 45px;
+        }
+
+        #gender {
+            width: 400px;
+            height: 40px;
+        }
+
+        #sub {
+            color: #a8a8a8;
+        }
+
+        #phoneNumber select {
+            width: 400px;
+            height: 50px;
+        }
+
+        #phoneNumber {
+            padding-bottom: 20px;
+        }
+
+        #phoneNumberInput input {
+            width: 300px;
+        }
+
+        #phoneNumberInput button {
+            width: 100px;
+            font-size: 70%;
+            height: 45px;
+            background-color: #0fc75a;
+            color: white;
+            font-weight: bold;
+            border: none;
+        }
+
+        #phoneNumberInput button:hover {
+            background-color:teal;
+        }
+        
+        #registerBtn {
+            width: 400px;
+            height: 45px;
+            background-color: #0fc75a;
+            color: white;
+            font-weight: bold;
+            border: none;
+        }
+        
+        #registerBtn:hover {
+            background-color:teal;
+        }
+
+        #info h6 {
+            float: left;
+            padding: 5px;
+        }
+
+        footer h6 {
+            font-size: 70%;
+        }
+
+        footer img {
+            width: 60px;
+            float: left;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        #password img {
+            position: absolute;
+            right: 10px;
+            top: 225px;
+        }
+
+        #passwordCheck img {
+            position: absolute;
+            right: 10px;
+            top: 310px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/naver_logo.png">
+    </header>
+
+    <div id="content">
+    <section>
+        <div class="input" id="id">
+            <h3>아이디</h3>
+            <input type="text">
+            <h6>@naver.com</h6>
+        </div>
+        <div class="input" id="password">
+            <h3>비밀번호</h3>
+            <input type="text">
+            <img src="images/lock.png">
+        </div>
+        <div class="input" id="passwordCheck">
+            <h3>비밀번호 재확인</h3>
+            <input type="password">
+            <img src="images/lock.png">
+        </div>
+
+        <div id="seperator"></div>
+
+        <div class="input">
+            <h3>이름</h3>
+            <input type="text">
+        </div>
+        <span class="input" id="bday">
+            <h3>생년월일</h3>
+            <input type="text" placeholder="년(4자)">
+            <select>
+                <option>1월</option>
+                <option>2월</option>
+                <option>3월</option>
+                <option>4월</option>
+                <option>5월</option>
+                <option>6월</option>
+                <option>7월</option>
+                <option>8월</option>
+                <option>9월</option>
+                <option>10월</option>
+                <option>11월</option>
+                <option>12월</option>
+            </select>
+            <input type="text" placeholder="일">
+        </span>
+        <div class="input">
+            <h3>성별</h3>
+            <select id="gender">
+                <option>남</option>
+                <option>여</option>
+            </select>
+        </div>
+        <div class="input">
+            <h3>본인 확인 이메일<span id="sub">(선택)</span></h3>
+            <input type="text" placeholder="선택입력">
+        </div>
+        <div class="input" id="phoneNumber">
+            <h3>휴대전화</h3>
+            <select>
+                <option>대한민국 +82</option>
+                <option>미국 +1</option>
+                <option>영국 +44</option>
+                <option>일본 +81</option>
+            </select>
+
+            <div id="seperator"></div>
+
+            <div id="phoneNumberInput">
+                <input type="text" placeholder="전화번호 입력">
+                <button>인증번호 받기</button>
+            </div>
+
+            <div id="seperator"></div>
+
+            <input type="text" placeholder="인증번호 입력하세요">
+        </div>
+
+        <button id="registerBtn">가입하기</button>
+
+    </section>
+
+    <footer>
+        <div id="info">
+            <h6>이용약관</h6>
+            <h6>개인정보처리방침</h6>
+            <h6>책임의 한계와 법적고지</h6>
+            <h6>회원정보 고객센터</h6>
+        </div>
+        <div id="brand">
+            <img src="images/naver_logo.png">
+            <h6>Copyright <b>NAVER Corp.</b> All Rights Reserved.</h6>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>

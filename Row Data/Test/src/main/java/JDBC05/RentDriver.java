@@ -28,6 +28,7 @@ public class RentDriver {
 				
 				break;
 			case "4":
+				delete();
 				break;
 			default:
 				System.out.println("메뉴 선택이 잘못됨");	
@@ -84,4 +85,51 @@ public class RentDriver {
 		if(result == 1) System.out.println("레코드 추가 성공");
 		else System.out.println("레코드 추가 실패");
 	}
-}
+
+	private static void update() {
+		Scanner sc = new Scanner(System.in);
+		RentDao rdao = RentDao.getInstance();
+		RentDto rdto = new RentDto();
+		
+		System.out.print("수정할 대여건의 number입력: ");
+		String input;
+		while(true) {
+			input = sc.nextLine();
+			if(input.equals("")) System.out.println("number 입력은 필수");
+			else break;
+		}
+		int num = Integer.parseInt(input);
+		rdto = rdao.getRent(num);
+		if(rdto == null) {
+			System.out.print("입력한 number의 대여건이 없음");
+			return;
+		} 
+		
+		// 수정할 내용 입력
+		// String rentdate, int num, int booknum, int membernum, int discount
+		System.out.print("변경할 날짜 입력: ");
+		String rentdate = sc.nextLine();
+		if(!rentdate.equals("")) rdto.setRentdate(rentdate);
+		System.out.print("변경할 순번 입력: ");
+		String rentnum = sc.nextLine();
+		if(!rentnum.equals("")) ;
+		System.out.print("변경할 도서번호 입력: ");
+		
+		System.out.print("변경할 회원번호 입력: ");
+		
+		System.out.print("변경할 할인금액 입력: ");
+	}
+
+	private static void delete() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("지울 번호 입력: ");
+		String num = sc.nextLine();
+		
+		RentDao rdao = RentDao.getInstance();
+		
+		int result = rdao.delete(Integer.parseInt(num));
+		
+		if(result == 1) System.out.println("지우기 성공");
+		else System.out.println("지우기 실패");
+	}
+} 
