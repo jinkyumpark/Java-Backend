@@ -18,13 +18,13 @@ public class MemberDriver {
 			if(choice.equals("5")) break;
 			
 			
-			switch(choice) {
+			switch(choice) {	
 			case "1":
 				select(sc);
 				break;
 			case "2":
 				insert(sc);
-				break;
+				break; 
 			case "3":
 				update(sc);
 				break;
