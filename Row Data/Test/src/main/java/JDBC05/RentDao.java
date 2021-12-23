@@ -15,7 +15,40 @@ public class RentDao {
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
 	
-	public ArrayList<RentDto> select(){
+	public ArrayList<RentDetailDto> selectAll() {
+		String sql =	"select to_char(a.rentdate, 'YYYY-MM-DD as rentdate"
+				+ 		"a.num as rentnum, c.num as membernum, c.name as membername,"
+				+ 		"b.rentprice - a.discount as rentprice2,"
+				+ 		"b.num as booknumber4, b.subject as subject,"
+				+ 		"from rentlist a, booklist b, memberlist c"
+				+ 		"where a.booknum = b.num and a.membernum = c.num";
+		sql = "select * from rentdetail";
+		ArrayList<RentDetailDto> list = new ArrayList<RentDetailDto>();
+		
+		con = DBManager.getConnection();
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				RentDetailDto rdto = new RentDetailDto();
+				rdto.setRentdate(rs.getString("rentdate"));
+				rdto.setRentnumber(rs.getInt("rentnumber"));
+				rdto.setMembernumber(rs.getInt("membernumber"));
+				rdto.setMembername(rs.getString("membername"));
+				rdto.setRentprice(rs.getInt("rentprice2"));
+				rdto.setBooknumber(rs.getInt("booknumber"));
+				rdto.setSubject(rs.getString("subject"));
+				list.add(rdto);
+			}
+		} catch(SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(con, pstmt, rs);
+		}
+	}
+	
+	public ArrayList<RentDto> select() {
 		ArrayList<RentDto> list = new ArrayList<RentDto>();
 		String sql = "select to_char(rentdate, 'YYYY-MM-DD') as rentdate, num, booknum, membernum, discount from rentlist order by num desc";
 		con = DBManager.getConnection();

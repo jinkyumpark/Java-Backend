@@ -8,11 +8,11 @@ public class RentDriver {
 		while(true) {
 			Scanner sc = new Scanner(System.in);
 			System.out.println("---메뉴 선택---");
-			System.out.println("1. 데이터열람  2. 데이터추가 3. 데이터수정 4. 데이터삭제 5. 프로그램종료");
+			System.out.println("1. 데이터열람  2. 데이터추가 3. 데이터수정 4. 데이터삭제 5. 상세데이터열람 6. 프로그램종료");
 			System.out.print(">> 메뉴선택 : ");
 			
 			String choice = sc.nextLine();
-			if(choice.equals("5")) {
+			if(choice.equals("6")) {
 				System.out.println("프로그램을 종료합니다...");
 				break;
 			}
@@ -30,9 +30,25 @@ public class RentDriver {
 			case "4":
 				delete();
 				break;
+			case "5":
+				break;
 			default:
 				System.out.println("메뉴 선택이 잘못됨");	
 			}
+		}
+	}
+	
+	private static void selectAll() {
+		Scanner sc = new Scanner(System.in);
+		RentDao rdao = RentDao.getInstance();
+		ArrayList<RentDto> list = rdao.select();
+		
+		System.out.println("날짜\t\t순번\t도서번호\t회원번호\t할인금액");
+		System.out.println("-----------------------------------------------------------");
+		for(RentDto dto : list) {
+			System.out.printf("%s\t%d\t%s\t%s\t%d\n", 
+					dto.getRentdate(), dto.getNum(), dto.getBooknum(), dto.getMembernum(), dto.getDiscount()
+					);
 		}
 	}
 	
