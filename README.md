@@ -1,7 +1,7 @@
 # Overall Progress
 - Java
 - Front-end(HTML, CSS, JS, jQuery)
-- Database(Oracle, SQL, JDBC)
+- Database(OracleDB, MySQL, SQL, JDBC)
 - JSP
 - Servlet
 - Spring Framework

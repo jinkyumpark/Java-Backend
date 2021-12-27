@@ -12,11 +12,11 @@ COMMENT = 'Book List';
 
 SELECT * FROM scott.booklist;
 
--- ¿¬½À¹®Á¦
--- ¾Æ·¡ÀÇ ÇÊµå¸íÀ» ´ãÀº memberlist Å×ÀÌºí »ý¼º
--- ÇÊµå¸í : num(int, ÀÚµ¿Áõ°¡, ±âº»Å°), name(varchar(30), not null), birth(date, not null), bpoint(int), joindate(date, default now()),
+-- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+-- ï¿½Æ·ï¿½ï¿½ï¿½ ï¿½Êµï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ memberlist ï¿½ï¿½ï¿½Ìºï¿½ ï¿½ï¿½ï¿½ï¿½
+-- ï¿½Êµï¿½ï¿½ : num(int, ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½âº»Å°), name(varchar(30), not null), birth(date, not null), bpoint(int), joindate(date, default now()),
 -- age(int), gender(varchar(3))
--- Å×ÀÌºí ÄÚ¸àÆ® : È¸¿ø ¸ñ·Ï
+-- ï¿½ï¿½ï¿½Ìºï¿½ ï¿½Ú¸ï¿½Æ® : È¸ï¿½ï¿½ ï¿½ï¿½ï¿½
 
 CREATE TABLE `scott`.`memberlist` (
   `num` INT NOT NULL AUTO_INCREMENT,
@@ -29,19 +29,19 @@ CREATE TABLE `scott`.`memberlist` (
   PRIMARY KEY (`num`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
-COMMENT = 'È¸¿ø ¸ñ·Ï';
+COMMENT = 'È¸ï¿½ï¿½ ï¿½ï¿½ï¿½';
 
 ALTER TABLE `scott`.`memberlist`
 ADD COLUMN `phone` VARCHAR(45) NOT NULL;
 
--- ¿¬½À¹®Á¦ 2
--- Å×ÀÌºíÀÌ¸§ : rentlist
--- ÇÊµå : rentdate(datetime, default, now()), numseq(int, AI)
+-- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 2
+-- ï¿½ï¿½ï¿½Ìºï¿½ï¿½Ì¸ï¿½ : rentlist
+-- ï¿½Êµï¿½ : rentdate(datetime, default, now()), numseq(int, AI)
 -- booknum(int), membernum(int), discount(int)
 
--- Å×ÀÌºí comment : ¸ÅÃâ ¸ñ·Ï
--- ±âº» ¹®ÀÚ set : utf-8mb4
--- ¿öÅ© º¥Ä¡¿¡¼­ Å×ÀÌºí »ý¼ºÇÏ´Â ¸í·ÉÀ» º¹»çÇØ¼­ ÀÌÅ¬¸³½º¿¡ ºÙ¿©³Ö°í »ý¼ºÇÏ¼¼¿ä
+-- ï¿½ï¿½ï¿½Ìºï¿½ comment : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+-- ï¿½âº» ï¿½ï¿½ï¿½ï¿½ set : utf-8mb4
+-- ï¿½ï¿½Å© ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¿ï¿½ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½
 
 CREATE TABLE `scott`.`rentlist` (
   `rentdate` DATETIME NOT NULL DEFAULT now(),
@@ -52,7 +52,7 @@ CREATE TABLE `scott`.`rentlist` (
   PRIMARY KEY (`rentdate`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
-COMMENT = '¸ÅÃâ ¸ñ·Ï';
+COMMENT = 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½';
 
 ALTER TABLE `scott`.`rentlist` 
 ADD INDEX `fk1_idx` (`membernum` ASC) VISIBLE,
