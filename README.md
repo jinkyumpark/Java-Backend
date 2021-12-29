@@ -2,8 +2,7 @@
 - Java
 - Front-end(HTML, CSS, JS, jQuery)
 - Database(OracleDB, MySQL, SQL, JDBC)
-- JSP
-- Servlet
+- JSP, Servlet
 - Spring Framework
 
 # Week 1 - Java Fundamentals
@@ -257,7 +256,7 @@
 - Oracle View
 
 # Week 10
-# Week 11
+# Week 11 JSP, Servlet
 # Week 12
 # Week 13
 # Week 14
