@@ -13,7 +13,7 @@ String url = "jdbc:oracle:thin:@localhost:1521:xe";
 String driver = "oracle.jdbc.driver.OracleDriver";
 int result = 0;
 
-String id = request.getParameter("userid");
+String id = request.getParameter("id");
 String name = request.getParameter("name");
 String pwd = request.getParameter("pwd");
 String phone = request.getParameter("phone");
