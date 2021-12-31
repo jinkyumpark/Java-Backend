@@ -111,3 +111,31 @@
 
 - pageContext, request, session, application : 서버에 존재하며 이용할 수 있는 저장소
 
+# Day 52 (Dec.31 FRI)
+- EL(Expression Language)
+    - JSP 문법의 번거로움 해결하기 위한 출력 문법
+    - 주로 pageContext, request, session, application에 전달되는 attribute 값을 getter를 사용하지 않고 출력할때 사용
+    - 비교
+        - <% out.println("Hello"); %>
+        - ${"Hello"}
+    - eq, lt, empty
+    - 문자열 이어 붙일때는 += 사용(+는 에러)
+    - ${변수명} = request/pageContext/session/application . setAttribute()
+    - 변수 호출해도 자동으로 getter, setter 호출
+
+- JSP에서는 equals와 null 비교시 error
+    - null이 아닌지 확인후 비교해야 함
+
+- <pre> 태그 : 화면에 그대로 내역 출력(코드를 출력할때 주로 사용)
+
+- JSTL
+    - https://tomcat.apache.org/taglibs/standard/
+    - download
+    - lib - standard.jar, jstl.jar
+    - lib 폴더에 복사
+    
+    - <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+    - \<c:out>
+    - \<c:set var= value= target=>
+    - \<c:if test=>

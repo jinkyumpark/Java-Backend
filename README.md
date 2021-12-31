@@ -2,7 +2,7 @@
 - Java
 - Front-end(HTML, CSS, JS, jQuery)
 - Database(OracleDB, MySQL, SQL, JDBC)
-- JSP, Servlet
+- JSP, Servlet, EL, JSTL
 - Spring Framework
 
 # Week 1 - Java Fundamentals
