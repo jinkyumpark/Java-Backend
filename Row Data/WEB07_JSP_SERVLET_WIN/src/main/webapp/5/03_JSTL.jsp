@@ -23,7 +23,7 @@
 	<br><br><br>
 	
 	按眉积己 <br>
-	<c:set var="member" value="<%new com.ezen.dto.MemberBean() %>"></c:set>
+	<c:set var="member" value="<%new com.ezen.dto.MemberBean(); %>"></c:set>
 	
 	<c:set target="${member }" property="name" value="全辨悼"></c:set>
 	<c:set target="${member }" property="userid">Hong</c:set>
