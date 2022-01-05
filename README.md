@@ -257,7 +257,7 @@
 
 # Week 10
 # Week 11 JSP, Servlet
-# Week 12 JSP, Servlet Program
+# Week 12 JSP, Servlet Program, Spring Framework
 - index.jsp -> loginServlet.java 
   - doGet == null -> loginForm.jsp
   - doGet != null -> main.jsp
