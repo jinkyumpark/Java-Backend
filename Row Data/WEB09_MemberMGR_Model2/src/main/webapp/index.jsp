@@ -8,5 +8,9 @@
 </head>
 <body>
 
+<%
+response.sendRedirect("member.do?command=loginForm");
+%>
+
 </body>
 </html>
