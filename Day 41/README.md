@@ -94,7 +94,7 @@ scott이라는 이름, tiger라는 pw로 유저 생성
 - oracle
 
 - add JAR(oraclexe-app-oracle-product-11.2.0-server-jdbc-lib-ojdbc6.jar)
-
+cc
 - property(server -> localhost, db -> xe)
 
 - enter user id/pw

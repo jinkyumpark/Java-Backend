@@ -257,7 +257,12 @@
 
 # Week 10
 # Week 11 JSP, Servlet
-# Week 12
+# Week 12 JSP, Servlet Program
+- index.jsp -> loginServlet.java 
+  - doGet == null -> loginForm.jsp
+  - doGet != null -> main.jsp
+  - doPost (correct login info) -> mainServlet.java
+  - doPost (incorrect login info) -> loginForm.jsp
 # Week 13
 # Week 14
 # Week 15
