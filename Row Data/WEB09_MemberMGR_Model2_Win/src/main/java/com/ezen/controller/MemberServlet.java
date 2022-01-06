@@ -8,9 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.ezen.controller.action.Action;
-import com.ezen.controller.action.JoinFormAction;
-import com.ezen.controller.action.LoginAction;
-import com.ezen.controller.action.LoginFormAction;
 
 @WebServlet("/member.do")
 public class MemberServlet extends HttpServlet {
@@ -21,6 +18,8 @@ public class MemberServlet extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		
 		String command = request.getParameter("command");
 		
 		Action ac = null;

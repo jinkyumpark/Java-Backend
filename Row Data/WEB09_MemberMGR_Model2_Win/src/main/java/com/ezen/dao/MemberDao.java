@@ -62,7 +62,6 @@ public class MemberDao {
 		return mdto;
 	}
 	
-	
 	private void close() {
 		try {
 			if(con != null) con.close();
@@ -92,6 +91,47 @@ public class MemberDao {
 			e.printStackTrace();
 		}
 		
+		
+		return result;
+	}
+	
+	public int deleteMember(MemberDto mdto) {
+		String sql = "delete member where userid=?";
+		
+		int result = 0;
+		con = getConnection();
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, mdto.getUserid());
+			result = pstmt.executeUpdate();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+
+
+	public int updateMember(MemberDto mdto) {
+		String sql = "update member set name=?, pwd=?, phone=?, email=?, admin=? where userid=?;";
+		
+		con = getConnection();
+		int result = 0;
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, mdto.getName());
+			pstmt.setString(2, mdto.getPwd());
+			pstmt.setString(3, mdto.getPhone());
+			pstmt.setString(4, mdto.getEmail());
+			pstmt.setInt(5, mdto.getAdmin());
+			pstmt.setString(6, mdto.getUserid());
+			
+			result = pstmt.executeUpdate();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 		
 		return result;
 	}
