@@ -60,7 +60,7 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
     -->
-    <Connector connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
+    <Connector connectionTimeout="20000" port="8090" protocol="HTTP/1.1" redirectPort="8443"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -152,7 +152,15 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="WEB07_JSP_SERVLET" path="/WEB07_JSP_SERVLET" reloadable="true" source="org.eclipse.jst.jee.server:WEB07_JSP_SERVLET"/><Context docBase="WEB08_MemberMGR_UseServlet" path="/WEB08_MemberMGR_UseServlet" reloadable="true" source="org.eclipse.jst.jee.server:WEB08_MemberMGR_UseServlet"/></Host>
+      <Context docBase="WEB07_JSP_SERVLET" path="/WEB07_JSP_SERVLET" reloadable="true" source="org.eclipse.jst.jee.server:WEB07_JSP_SERVLET"/>
+      <Context docBase="WEB08_MemberMGR_UseServlet" path="/WEB08_MemberMGR_UseServlet" reloadable="true" source="org.eclipse.jst.jee.server:WEB08_MemberMGR_UseServlet"/>
+      
+      <Context docBase="WEB10_Model2_Board" path="/WEB10_Model2_Board" reloadable="true" source="org.eclipse.jst.jee.server:WEB10_Model2_Board">
+      	<Resource auth="Container" driverClassName="com.mysql.cj.jdbc.Driver" maxIdle="10" maxTotal="20" maxWaitMillis="-1" name="jdbc/myoracle" password="tiger" type="javax.sql.DataSource" url="jdbc:oracle:thin:@127.0.0.1:1521:xe" username="scott"/>
+      
+      </Context>
+      
+      <Context docBase="WEB12_ShoppingMall" path="/WEB12_ShoppingMall" reloadable="true" source="org.eclipse.jst.jee.server:WEB12_ShoppingMall"/></Host>
     </Engine>
   </Service>
 </Server>
